@@ -9,6 +9,7 @@ const mysql2 = require('mysql2');
 const conexion = mysql2.createConnection({
     host: DB_HOST,
     user: USER,
+    port: PORT,
     password: PASSWORD,
     database: DATABASE
 });
