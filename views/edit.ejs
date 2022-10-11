@@ -19,7 +19,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="/">INICIO</a>
               </li>                     
             </ul>
           </div>
@@ -30,7 +30,7 @@
       <div class="container mt-4">
           
           <div class="card border-secondary">  
-                <div class="card-header">Editar Registro</div>
+                <div class="card-header">EDITAR REGISTRO</div>
                 <div class="card-body">
                     <form action="/update" method="POST">
                          <input id="id" name="id" value="<%= user.id %>" hidden>
@@ -43,11 +43,14 @@
                           <select id="rol" name="rol" class="form-select"  value="" tabindex="2">
                             <option <%- user.rol=='visto' ? "selected" : "" %> value="visto">VISTO</option>
                             <option <%- user.rol=='no visto' ? "selected" : "" %> value="no visto">NO VISTO</option>
-                            
                           </select>
-                        </div>                                                              
-                        <button type="submit" class="btn btn-primary" tabindex="5"><i class='bx bxs-save' ></i></button>
-                        <a href="/" class="btn btn-secondary"><i class='bx bxs-no-entry' ></i></a>
+                        </div>
+                        <div class="mb-3">
+                          <label for="cap" class="form-label">CAPITULO</label>
+                          <input type="text" class="form-control" id="cap" name="cap" tabindex="3" value="<%= user.cap  %>">                        
+                        </div>                                                               
+                        <button type="submit" class="btn btn-primary" tabindex="5">GUARDAR</button>
+                        <a href="/" class="btn btn-secondary">CANCELAR</a>
                     </form>
        
                 </div>
