@@ -10,6 +10,6 @@ app.use(express.json());
 
 app.use('/', router);
 
-app.listen(8001, ()=>{
+app.listen(80, ()=>{
     console.log("Servidor corriendo desde https://localhost:8001")
 });
